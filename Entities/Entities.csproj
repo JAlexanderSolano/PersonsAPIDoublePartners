@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Iperson.cs" />
     <Compile Include="Interfaces\Iresultado.cs" />
+    <Compile Include="person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="resultado.cs" />
   </ItemGroup>

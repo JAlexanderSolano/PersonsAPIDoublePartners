@@ -12,9 +12,11 @@ var configuration = builder.Configuration;
 builder.Services.AddRazorPages();
 builder.Services.AddCors();
 builder.Services.AddTransient<Entities.Interfaces.Iresultado, Entities.resultado>();
+builder.Services.AddTransient<Entities.Interfaces.Iperson, Entities.person>();
+
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "PersonsAPIDOublePartners", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "PersonsAPIDoublePartners", Version = "v1" });
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);
@@ -47,7 +49,7 @@ app.UseSwagger();
 
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "PersonsAPIDOublePartners V1");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "PersonsAPIDoublePartners V1");
 });
 
 

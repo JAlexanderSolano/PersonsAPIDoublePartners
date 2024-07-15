@@ -27,7 +27,7 @@ namespace Entities
                 string _res = "";
                 foreach (DataRow fila in tbl.Rows)
                 {
-                    _res = fila["resultado"].ToString();
+                    _res = fila["result"].ToString();
                 }
                 resultados.Add(new resultado(_res, 200) { });
             }
