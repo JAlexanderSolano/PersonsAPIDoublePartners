@@ -47,6 +47,14 @@ app.MapControllers();
 
 app.UseSwagger();
 
+// habilitamos el cors para consumir 
+app.UseCors(_cors =>
+{
+    _cors.AllowAnyOrigin();
+    _cors.AllowAnyMethod();
+    _cors.AllowAnyHeader();
+});
+
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "PersonsAPIDoublePartners V1");
